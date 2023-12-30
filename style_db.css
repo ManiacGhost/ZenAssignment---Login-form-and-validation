@@ -1,0 +1,86 @@
+h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 40px;
+    font-size: 1.3em;
+}
+
+body{
+    background: #E5E4E2;
+}
+
+.note {
+    background: #fff;
+    height: 80px;
+    width: 19%;
+    border: solid;
+    border-color: #fff;
+    border-left-color: rgb(89, 237, 192);
+    border-left-width: 7px;
+    border-radius: 0px;
+    box-shadow:0 19 px 13px #ccc;
+    padding: 15px;
+    margin: 16px;
+    float: left;
+  }
+  .note h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 6px;
+  }
+  .note p {
+    font-family:Cambria bold, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  table{
+    width: 100%;
+    border: 1px;
+  }
+  .noteone{
+    background: #fff;
+    width: 68%;
+    height: 270px;
+    border: solid;  
+    border-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 15px;
+    margin: 16px;
+    
+  }
+  .notetwo{
+    background: #fff;
+    width: 68%;
+    height: 270px;
+    border: solid;  
+    border-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 15px;
+    margin: 16px;
+    
+  }
+  .tablehead{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    text-align: left;
+    padding-left: 40px;
+    
+  }
+
+  td{
+    padding: 12px;
+  }
+
+  .first{
+    font-size: normal;
+    color: rgb(89, 237, 192);
+  }
+  .second{
+    font-style: normal;
+    color: red;
+  }

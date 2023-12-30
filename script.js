@@ -20,10 +20,13 @@ function validateForm() {
     // Redirect if password is correct
     if (password == 'SmartServTest@123') {
         alert('Login successful! Redirecting to the dashboard...');
-        location.replace("https://www.google.com/");
+        location.replace("./dasboard.html");
         
     } else {
         alert('Incorrect password. Please try again.');
         return false;
     }
-}   
+}
+
+
+
