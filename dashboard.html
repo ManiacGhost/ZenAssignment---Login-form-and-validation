@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'><link rel="stylesheet" href="./style_db.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +41,77 @@
         <h1>65</h1>
         <p>this is a paragraph inside the note</p>
       </div>
+      <br>
+      <br>
+      <br>
       
+
+      <table>
+        <tr>
+        <th class="tablehead">Revenue By Job Location</th>
+        <th class="tablehead">Revenue By Job Type</th>
+        </tr>
+        <tr>
+          <td><div class="noteone"><canvas id="myChart" style="width: 29%;"></canvas></div></td>
+          <td><div class="notetwo"><canvas id="myChartone" style="width: 29%;"></canvas></div></td>
+        </tr>
       
 </body>
+
+<script>
+var xValues = ["Everett", "Seatlle", "Lynwood", "Bothell", "Mukilteo","Edmonds"];
+var yValues = [1500000, 107000, 49000, 45000, 44000, 33000];
+var yValuesone = [1500000, 107000, 49000, 45000, 44000, 33000];
+var barColors = "#59EDC0";
+
+
+new Chart("myChart", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+    
+    
+  }]
+},
+  options: {
+    barpercentage:0.5,
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Revenue for November 2019"
+    },
+    scales: {
+      xAxes: 
+      [{ticks: {min: 5000, max:150000}}]
+     
+      
+    }
+  }
+});
+
+new Chart("myChartone", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValuesone
+  }]
+},
+  options: {
+    barpercentage:0.5,
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Revenue for November 2019"
+    },
+    scales: {
+      xAxes: [{ticks: {min: 5000, max:150000}}]
+    }
+  }
+});
+</script>
 </html>
