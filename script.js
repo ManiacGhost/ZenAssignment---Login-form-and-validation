@@ -1,32 +1,31 @@
-function validateForm() {
+function validateForm(e) {
+    e.preventDefault();
     // Get input values
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
+    // Initialize form validity as true
+    var isFormValid = true;
+
     // Email validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(username)) {
+    var email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.test(username)) {
         alert('Please enter a valid email address');
-        return false;
+        isFormValid = false;
     }
-
+    
     // Password validation
-    var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8,}$/;
-    if (!passwordRegex.test(password)) {
+    var pass = /^(?=.*[A-Z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8,}$/;
+    if (!pass.test(password)) {
         alert('Password must contain at least one uppercase letter, one number, and only "@" as a special character.');
-        return false;   
+        isFormValid = false;
     }
-
-    // Redirect if password is correct
+    console.log(password)
+    // Redirect if password is correct and form is valid
     if (password == 'SmartServTest@123') {
         alert('Login successful! Redirecting to the dashboard...');
-        location.replace("./dasboard.html");
-        
-    } else {
+        location.replace("dashboard.html");
+    } else if (isFormValid) {
         alert('Incorrect password. Please try again.');
-        return false;
-    }
+    }
 }
-
-
-
